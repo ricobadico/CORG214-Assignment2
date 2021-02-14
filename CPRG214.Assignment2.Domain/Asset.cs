@@ -10,10 +10,13 @@ namespace CPRG214.Assignment2.Domain
         public int Id { get; set; }
 
         [Required]
+        [Display(Name = "Tag Number")]
         public string TagNumber { get; set; }
 
+        [Display(Name = "Asset Type")]
         public int AssetTypeId { get; set; }
 
+        [Display(Name = "Manufacturer")]
         public int ManufacturerId { get; set; }
 
         public string Model { get; set; }
