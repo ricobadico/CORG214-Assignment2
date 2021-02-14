@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CPRG214.Assignment2.BLL\CPRG214.Assignment2.BLL.csproj" />
+    <ProjectReference Include="..\CPRG214.Assignment2.Domain\CPRG214.Assignment2.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
