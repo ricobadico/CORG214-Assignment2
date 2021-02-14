@@ -1,8 +1,10 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace CPRG214.Assignment2.Domain
 {
+    [Table("Asset")]
     public class Asset
     {
         public int Id { get; set; }
