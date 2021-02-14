@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG214.Assignment2.Data", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG214.Assignment2.BLL", "CPRG214.Assignment2.BLL\CPRG214.Assignment2.BLL.csproj", "{3C328B0C-48B3-48D8-8E17-DB937EDA9752}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CPRG214.Assignment2.AssetTracking", "CPRG214.Assignment2.AssetTracking\CPRG214.Assignment2.AssetTracking.csproj", "{F6BF9BF7-CCB5-4008-98E7-D58C9E155914}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{3C328B0C-48B3-48D8-8E17-DB937EDA9752}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C328B0C-48B3-48D8-8E17-DB937EDA9752}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C328B0C-48B3-48D8-8E17-DB937EDA9752}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6BF9BF7-CCB5-4008-98E7-D58C9E155914}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6BF9BF7-CCB5-4008-98E7-D58C9E155914}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6BF9BF7-CCB5-4008-98E7-D58C9E155914}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6BF9BF7-CCB5-4008-98E7-D58C9E155914}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
