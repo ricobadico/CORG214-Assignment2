@@ -10,9 +10,8 @@ namespace CPRG214.Assignment2.Domain
         [Required]
         public string TagNumber { get; set; }
 
-        public int MyProperty { get; set; }
+        public int AssetTypeId { get; set; }
 
-        [Required]
         public int ManufacturerId { get; set; }
 
         public string Model { get; set; }
@@ -21,6 +20,7 @@ namespace CPRG214.Assignment2.Domain
         public string Description { get; set; }
 
         [Required]
+        [Display(Name = "Serial Number")]
         public string SerialNumber { get; set; }
 
         // Navigation property

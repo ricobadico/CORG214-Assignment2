@@ -1,0 +1,12 @@
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.deps.json
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.dll
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.pdb
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.Domain.dll
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.Domain.pdb
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.csprojAssemblyReference.cache
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.AssemblyInfoInputs.cache
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.AssemblyInfo.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.csproj.CoreCompileInputs.cache
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.csproj.CopyComplete
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.dll
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.Data\obj\Debug\netcoreapp3.1\CPRG214.Assignment2.Data.pdb
