@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CPRG214.Assignment2.Data\CPRG214.Assignment2.Data.csproj" />
+    <ProjectReference Include="..\CPRG214.Assignment2.Domain\CPRG214.Assignment2.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
