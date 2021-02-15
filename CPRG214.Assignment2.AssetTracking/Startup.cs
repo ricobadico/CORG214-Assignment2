@@ -50,7 +50,7 @@ namespace CPRG214.Assignment2.AssetTracking
             {
                 endpoints.MapControllerRoute(
                     name: "default",
-                    pattern: "{controller=Home}/{action=Index}/{id?}");
+                    pattern: "{controller=Asset}/{action=Index}/{id?}");
             });
         }
     }
