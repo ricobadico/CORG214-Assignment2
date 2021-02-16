@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewData["Title"] = "ExampleCorp's Asset Tracking API";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+
+<dl>
+    <dt>Select an asset type to filter by:</dt>
+    <dd>
+        <select id="ddSelectAssetType" asp-items="@ViewBag.AssetTypeList"></select>
+    </dd>
+</dl>
+
+<div id="assetDisplayContainer">
+    @await Component.InvokeAsync("AssetsByType", 0)
+</div>
+
+@section Scripts{ 
+    <script>
+        $(document).ready(function () {
+
+            $("#ddSelectAssetType").change(() =>
+            {
+                var assetTypeID = $("#ddSelectAssetType").val();
+
+                $.ajax({
+                    method: 'GET',
+                    url: '/Assets/GetAssetsByType',
+                    data: { id: assetTypeID }
+                }).done((result, statusText, xhdr) =>
+                {
+                    $("#assetDisplayContainer").html(result);
+                });
+            });
+        });
+    </script>
+}
+
+

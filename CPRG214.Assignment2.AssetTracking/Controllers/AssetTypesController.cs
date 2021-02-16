@@ -1,25 +1,25 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using CPRG214.Assignment2.BLL;
+using CPRG214.Assignment2.Domain;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace CPRG214.Assignment2.AssetTracking.Controllers
 {
-    public class AssetTypeController : Controller
+    public class AssetTypesController : Controller
     {
         // GET: AssetTypeController
         public ActionResult Index()
         {
-            return View();
+            IList assetTypes = AssetTypeManager.GetAll();
+
+            return View(assetTypes);
         }
 
-        // GET: AssetTypeController/Details/5
-        public ActionResult Details(int id)
-        {
-            return View();
-        }
 
         // GET: AssetTypeController/Create
         public ActionResult Create()
@@ -30,10 +30,11 @@ namespace CPRG214.Assignment2.AssetTracking.Controllers
         // POST: AssetTypeController/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create(IFormCollection collection)
+        public ActionResult Create(AssetType newAssetType)
         {
             try
             {
+                AssetTypeManager.Add(newAssetType);
                 return RedirectToAction(nameof(Index));
             }
             catch
@@ -41,6 +42,7 @@ namespace CPRG214.Assignment2.AssetTracking.Controllers
                 return View();
             }
         }
+
 
         // GET: AssetTypeController/Edit/5
         public ActionResult Edit(int id)

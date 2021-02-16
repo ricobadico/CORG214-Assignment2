@@ -1,4 +1,5 @@
 ﻿using CPRG214.Assignment2.Data;
+using CPRG214.Assignment2.Domain;
 using System;
 using System.Collections;
 using System.Linq;
@@ -28,6 +29,14 @@ namespace CPRG214.Assignment2.BLL
             }).ToList();
 
             return assetTypes;
+        }
+
+        public static void Add(AssetType newAssetType)
+        {
+            AssetsContext db = new AssetsContext();
+
+            db.AssetTypes.Add(newAssetType);
+            db.SaveChanges();
         }
     }
 }

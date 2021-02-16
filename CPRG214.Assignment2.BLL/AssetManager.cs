@@ -28,6 +28,18 @@ namespace CPRG214.Assignment2.BLL
             return assets;
         }
 
+        public static List<Asset> GetAssetsByAssetType(int assetTypeID)
+        {
+            AssetsContext db = new AssetsContext();
+            List<Asset> assets = db.Assets
+                .Where(asset => asset.AssetTypeId == assetTypeID)
+                .Include(asset => asset.AssetType) // Navigation Property
+                .Include(asset => asset.Manufacturer) // Navigation Property
+                .ToList();
+
+            return assets;
+        }
+
         /// <summary>
         /// Inserts provided asset into the database.
         /// </summary>

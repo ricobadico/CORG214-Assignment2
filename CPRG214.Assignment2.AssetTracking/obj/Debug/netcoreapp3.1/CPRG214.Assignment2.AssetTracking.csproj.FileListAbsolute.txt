@@ -152,6 +152,8 @@ C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracki
 C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\bin\Debug\netcoreapp3.1\zh-Hans\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\bin\Debug\netcoreapp3.1\zh-Hant\Microsoft.CodeAnalysis.Workspaces.resources.dll
 C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\bin\Debug\netcoreapp3.1\CPRG214.Assignment2.BLL.pdb
-C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\AssetType\Index.cshtml.g.cs
-C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\Asset\Create.cshtml.g.cs
-C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\Asset\Index.cshtml.g.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\Assets\Create.cshtml.g.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\Assets\Index.cshtml.g.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\AssetTypes\Index.cshtml.g.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\AssetTypes\Create.cshtml.g.cs
+C:\Users\811405\source\repos\CPRG214.Assignment2\CPRG214.Assignment2.AssetTracking\obj\Debug\netcoreapp3.1\Razor\Views\Shared\Components\AssetsByType\Default.cshtml.g.cs
