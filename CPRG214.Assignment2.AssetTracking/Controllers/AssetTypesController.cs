@@ -37,8 +37,14 @@ namespace CPRG214.Assignment2.AssetTracking.Controllers
                 AssetTypeManager.Add(newAssetType);
                 return RedirectToAction(nameof(Index));
             }
+            catch (ArgumentException ex)
+            {
+                ViewBag.UniqueConstraintError = ex.Message;
+                return View();
+            }
             catch
             {
+                ViewBag.ErrorMessage = "There was an issue adding this entry to the database. Please try again or contact IT.";
                 return View();
             }
         }

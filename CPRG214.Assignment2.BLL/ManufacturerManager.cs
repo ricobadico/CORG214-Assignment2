@@ -45,11 +45,21 @@ namespace CPRG214.Assignment2.BLL
                 Name = manuName
             };
 
-            db.Manufacturers.Add(newManu);
-            db.SaveChanges();
+            // See if the new Asset's name already exists in the DB
+            var existingName = db.AssetTypes.SingleOrDefault(at => at.Name == manuName);
 
-            // After calling SaveChanges, we can get the insert ID straight from the object
-            return newManu.Id;
+            if (existingName == null) // if that name is not in use yet
+            {
+                db.Manufacturers.Add(newManu);
+                db.SaveChanges();
+
+                // After calling SaveChanges, we can get the insert ID straight from the object
+                return newManu.Id;
+            }
+            else
+            {
+                throw new ArgumentException($"The asset type {manuName} already exists.");
+            }
         }
     }
 }

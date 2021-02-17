@@ -2,23 +2,26 @@
 @{
 }
 
-<div class="scrollable-mobile-table">
-    <table class="table col-sm-8">
+<div class="scrollable-mobile-table container col-sm-12 mx-auto p-2 rounded" style="        background-color: rgba(226,234,235,.8)
+">
+    <table class="table mx-auto no-pad">
         <thead>
-            <tr>
-                <th>
+            <tr class="rounded th-logo-color">
+                <th class="text-logo">
                     @Html.DisplayNameFor(model => model.Description)
                 </th>
-                <th>
+                <th class="text-logo">
                     @Html.DisplayNameFor(model => model.TypeName)
                 </th>
-                <th>
+                <th class="text-logo">
                     @Html.DisplayNameFor(model => model.TagNumber)
                 </th>
-                <th>
+                <th class="text-logo">
                     @Html.DisplayNameFor(model => model.SerialNumber)
                 </th>
-                <th></th>
+                <th class="text-logo">
+                    Options
+                </th>
             </tr>
         </thead>
         <tbody>
@@ -37,10 +40,9 @@
                     <td>
                         @Html.DisplayFor(modelItem => item.SerialNumber)
                     </td>
-                    <td>
-                        @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                        @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                    <td width="130px">
+                        @Html.ActionLink("Details", "Details", new { id=item.Id}) |
+                        @Html.ActionLink("Delete", "Delete", new { id=item.Id})
                     </td>
                 </tr>
             }

@@ -1,6 +1,7 @@
 ﻿using CPRG214.Assignment2.AssetTracking.Models;
 using CPRG214.Assignment2.BLL;
 using CPRG214.Assignment2.Domain;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
@@ -85,6 +86,7 @@ namespace CPRG214.Assignment2.AssetTracking.Controllers
 
         [HttpPost]
         // Inserts a new manufacturer into the database
+        // Though this might be merged into the Manufacturer Controller, it does work differently and is only used during Asset Creation
         public IActionResult AddManufacturer(string manufacturerType)
         {
 
@@ -92,5 +94,39 @@ namespace CPRG214.Assignment2.AssetTracking.Controllers
             return Content(newManufacturerID.ToString());
  
         }
+
+        // GET: HomeController1/Details/5
+        public ActionResult Details(int id)
+        {
+            Asset asset = AssetManager.FindByID(id);
+
+            return View(asset);
+        }
+
+        // GET: HomeController1/Delete/5
+        public ActionResult Delete(int id)
+        {
+            Asset asset = AssetManager.FindByID(id);
+
+            return View(asset);
+        }
+
+        // POST: HomeController1/Delete/5
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(int id, IFormCollection collection)
+        {
+            try
+            {
+                AssetManager.DeleteByID(id);
+                return RedirectToAction(nameof(Index));
+            }
+            catch
+            {
+                ViewBag.ErrorMessage = "There was an issue deleting this entry to the database. Please try again or contact IT.";
+                return View();
+            }
+        }
+
     }
 }

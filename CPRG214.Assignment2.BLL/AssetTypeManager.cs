@@ -34,9 +34,20 @@ namespace CPRG214.Assignment2.BLL
         public static void Add(AssetType newAssetType)
         {
             AssetsContext db = new AssetsContext();
+            
+            // See if the new Asset's name already exists in the DB
+            var existingName = db.AssetTypes.SingleOrDefault(at => at.Name == newAssetType.Name);
 
-            db.AssetTypes.Add(newAssetType);
-            db.SaveChanges();
+            if (existingName == null) // if that name is not in use yet
+            {
+                db.AssetTypes.Add(newAssetType);
+                db.SaveChanges();
+            }
+            else
+            {
+                throw new ArgumentException($"The asset type {newAssetType.Name} already exists.");
+            }
+
         }
     }
 }

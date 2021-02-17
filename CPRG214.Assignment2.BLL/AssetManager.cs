@@ -28,6 +28,32 @@ namespace CPRG214.Assignment2.BLL
             return assets;
         }
 
+        public static Asset FindByID(int id)
+        {
+            // Connect to database
+            AssetsContext db = new AssetsContext();
+
+            // Grab the asset with the given ID
+            Asset asset = db.Assets
+                .Include(asset => asset.AssetType) // Navigation Property
+                .Include(asset => asset.Manufacturer) // Navigation Property;
+                .Single(a => a.Id == id);
+
+            return asset;
+        }
+
+
+        public static void DeleteByID(int id)
+        {
+            // Connect to database
+            AssetsContext db = new AssetsContext();
+
+            // Grab the asset with the given ID
+            Asset asset = db.Assets.Single(a => a.Id == id);
+            db.Assets.Remove(asset);
+            db.SaveChanges();
+        }
+
         public static List<Asset> GetAssetsByAssetType(int assetTypeID)
         {
             AssetsContext db = new AssetsContext();

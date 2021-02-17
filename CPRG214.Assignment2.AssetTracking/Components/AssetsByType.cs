@@ -31,6 +31,7 @@ namespace CPRG214.Assignment2.AssetTracking.ViewComponents
             // Take these assets and map them onto the viewmodel
             List<AssetViewModel> assetViewModels = assets.Select(asset => new AssetViewModel
             {
+                Id = asset.Id,
                 Description = asset.Description,
                 TypeName = asset.AssetType.Name,
                 TagNumber = asset.TagNumber,

@@ -1,10 +1,6 @@
 ﻿@model CPRG214.Assignment2.Domain.Asset
 
-@{
-    ViewData["Title"] = "Create";
-}
-
-<h1>Create A New Asset</h1>
+<h3>Add a New Asset</h3>
 
 @*Error message only shows if the user tried to add a new, valid asset and it fails on the DB side*@
 <h4 class="text-danger">@ViewBag.ErrorMessage</h4>
@@ -80,7 +76,8 @@
             var match = list.find(m => m.Text == manuName);
             
             if (match == null)
-            { // If the user provided a new manufacturer, have to add it to the database
+            { // If the user provided a new manufacturer, confirm they want to make a new one
+                // Case 1: They want a new manufacturer
                 if (confirm("We don't have this manufacturer in our database yet. Would you like to add it?"))
                 {
                     // Make a call to add to the database
@@ -94,13 +91,13 @@
                         $("#manuValueField").val(result);
                     });
                 }
-                else // new input, but the user doesn't want it to be a new Manufacturer
+                else // Case 2: new input, but the user doesn't want it to be a new Manufacturer
                 {
                     // Return focus to the input
                     $('#comboManufacturers').focus();
                 }
             }   
-            else // if the user did select an existing option
+            else // Case 3: if the user did select an existing option
             {
                 // Insert the corresponding ID into the true, hidden input for manufacturer
                 $("#manuValueField").val(match.Value);

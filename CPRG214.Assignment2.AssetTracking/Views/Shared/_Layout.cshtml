@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-primary border-bottom box-shadow mb-3">
+<body class="d-flex flex-column align-content-center justify-content-between">
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-logo-comp box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Asset Tracker</a>
+                <a class="banner-logo" asp-area="" asp-controller="Home" asp-action="Index"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -19,13 +19,16 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Assets" asp-action="Index">Home</a>
+                            <a class="nav-link text-logo" asp-area="" asp-controller="Assets" asp-action="Index">Assets</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Assets" asp-action="Create">Add an Asset</a>
+                            <a class="nav-link text-logo" asp-area="" asp-controller="Assets" asp-action="Create">Add an Asset</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="AssetTypes" asp-action="Create">New Asset Type</a>
+                            <a class="nav-link text-logo" asp-area="" asp-controller="AssetTypes" asp-action="Create">New Asset Type</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-logo" asp-area="" asp-controller="Manufacturers" asp-action="Create">New Manufacturer</a>
                         </li>
                     </ul>
                 </div>
@@ -38,9 +41,9 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2021 - CPRG214.Assignment2.AssetTracking - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="border-top footer text-muted bg-logo-comp">
+        <div class="d-flex justify-content-center text-logo">
+            &copy; 2021 - CPRG214.Assignment2.AssetTracking
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

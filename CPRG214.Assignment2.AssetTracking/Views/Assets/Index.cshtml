@@ -1,23 +1,23 @@
-﻿
-@{
-    ViewData["Title"] = "ExampleCorp's Asset Tracking API";
-}
+﻿<div class="d-flex flex-column align-content-center">
+    
+    <div class="bg-logo">
+        <h2 class="text-logo">AssetCorp Asset Tracker</h2>
+    </div>
 
-<h1>@ViewData["Title"]</h1>
+    <h3 class="text-center">View Assets</h3>
+    <br />
+    <dl class="text-center">
+        <dt>Select an asset type to filter by:</dt>
+        <dd>
+            <select id="ddSelectAssetType" asp-items="@ViewBag.AssetTypeList"></select>
+        </dd>
+    </dl>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
-
-<dl>
-    <dt>Select an asset type to filter by:</dt>
-    <dd>
-        <select id="ddSelectAssetType" asp-items="@ViewBag.AssetTypeList"></select>
-    </dd>
-</dl>
-
-<div id="assetDisplayContainer">
-    @await Component.InvokeAsync("AssetsByType", 0)
+    <div class="container col-sm-10 mx-auto" id="assetDisplayContainer">
+        @await Component.InvokeAsync("AssetsByType", 0)
+    </div>
+    </br>
+    <a class="text-center" asp-action="Create"><h4>Add a New Asset</h4></a>
 </div>
 
 @section Scripts{ 
